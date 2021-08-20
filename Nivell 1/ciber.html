@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><Tasca-M07></Tasca-m07></title>
     <link rel="stylesheet" href="./styles.css">
-    <link rel="java" href="./javascript.js"
+    <link rel="java" href="./javascript.js">
 </head>
 <body>
     <script>
@@ -51,33 +51,49 @@
         */
         
     </script>
-    <div class="contenedor-calc">
-        <div class="contenedor-numeros">
-            <div class="input-num">
-                <input class="elements-cont" type="text" id="numeros">
-            </div>
-            <div class="cont-res">
-    
-            </div>
+    <div class="contenedor-general">
+        <div class="titol-cont">
+            <h2 class="titol-calc">
+                CALCULADORA
+            </h2>
+        
         </div>
         
-        <div class="cont-op">
-            <button class="button" type="button" id="suma-cont">
-                +
-            </button>
-            <button class="button" type="button" id="resta-cont">
-                -
-            </button>
-            <button class="button" type="button" id="div-cont">
-                /
-            </button>
-            <button class="button" type="button" id="mult-cont">
-                x
-            </button>
+        <div class="contenedor-calc">
+            <div class="contenedor-numeros">
+                <div class="input-num">
+                    <input class="elements-cont" type="text" id="numeros" placeholder="Escribe aquí">
+                </div>
+                <div class="cont-res" id="res">
+                    <div class="res">
+                        Aquí va el resultado
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cont-op">
+                <button class="button" type="button" id="suma-cont">
+                    <h5 class="signo">
+                        +
+                    </h5>
+                </button>
+                <button class="button" type="button" id="resta-cont">
+                    <h5 class="signo">
+                        -
+                    </h5>
+                </button>
+                <button class="button" type="button" id="div-cont">
+                    <h5 class="signo">
+                        /
+                    </h5>
+                </button>
+                <button class="button" type="button" id="mult-cont">
+                    <h5 class="signo">
+                        x
+                    </h5>
+                </button>
+            </div>
         </div>
-        
     </div>
-        
-
 </body>
 </html>
