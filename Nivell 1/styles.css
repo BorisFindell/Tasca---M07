@@ -1,0 +1,58 @@
+.contenedor-calc {
+    box-sizing: content-box;
+    border: 5px solid black;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    position: relative;
+}
+
+.input-num {
+    justify-content: right;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.elements-cont {
+    width: 100px;
+    height: fit-content;
+    font-size: 20px;
+    text-align: end;
+    justify-content: end;
+    position: absolute;
+}
+
+.cont-op {
+    box-sizing: border-box;
+    border: 1px solid black;
+    width: 100%;
+    height: 50%;
+    display: grid;
+    align-self: flex-end;
+    position: absolute;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: #f6e58d;
+}
+
+.button {
+    width: 40px;
+    height: 40px;
+    justify-self: center;
+    align-self: center;
+}
+
+.cont-res {
+    box-sizing: border-box;
+    border: 3px solid green;
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    align-self: center;
+}
+
+.contenedor-numeros {
+    width: 100%;
+    height: 50%;
+}
