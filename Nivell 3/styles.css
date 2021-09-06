@@ -1,0 +1,120 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 50%;
+    height: 100vh;
+    margin-right: 25%;
+    margin-left: 25%;
+}
+
+.contenedor-general {
+    width: 100%;
+    height: 800px;
+    justify-items: center;
+    position: relative;
+}
+
+.contenedor-calc {
+    box-sizing: content-box;
+    border: 5px solid black;
+    width: 50%;
+    height: 25%;
+    margin-left: 25%;
+    margin-right: 25%;
+    display: flex;
+    position: relative;
+}
+
+.input-num {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    position: absolute;
+    justify-content: flex-end;
+}
+
+.elements-cont {
+    width: 100px;
+    height: fit-content;
+    font-size: 20px;
+    text-align: end;
+    position: absolute;
+}
+
+.cont-op {
+    box-sizing: border-box;
+    border: 1px solid black;
+    width: 100%;
+    height: 65%;
+    display: grid;
+    align-self: flex-end;
+    position: absolute;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: #f6e58d;
+}
+
+.button {
+    width: 50%;
+    height: 50%;
+    justify-self: center;
+    align-self: center;
+    font-size: 16px;
+}
+
+.cont-res {
+    box-sizing: border-box;
+    border: 3px solid green;
+    position: absolute;
+    width: 100%;
+    height: 15%;
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contenedor-numeros {
+    width: 100%;
+    height: 35%;
+    display: flex;
+}
+
+.elements-cont::placeholder {  
+    font-size: 10px;
+    text-align: left;
+} 
+
+.titol-calc {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;    
+}
+
+.titol-cont {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    margin-top: 7%;
+}
+
+
+.res {
+    position: absolute;
+    font-size: 15px;
+    align-self: flex-end;
+}
+
+h5 {
+    font-size:0.8rem ;
+    width: 100%;
+    height: 100%;
+    
+} 
+
+.signo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
