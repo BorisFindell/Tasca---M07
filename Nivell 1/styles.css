@@ -12,7 +12,7 @@ body {
 
 .contenedor-general {
     width: 100%;
-    height: 100%;
+    height: 800px;
     justify-items: center;
     position: relative;
 }
@@ -48,12 +48,12 @@ body {
     box-sizing: border-box;
     border: 1px solid black;
     width: 100%;
-    height: 50%;
+    height: 65%;
     display: grid;
     align-self: flex-end;
     position: absolute;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     background-color: #f6e58d;
 }
 
@@ -70,7 +70,7 @@ body {
     border: 3px solid green;
     position: absolute;
     width: 100%;
-    height: 40px;
+    height: 15%;
     align-self: flex-end;
     display: flex;
     justify-content: flex-end;
@@ -78,9 +78,8 @@ body {
 
 .contenedor-numeros {
     width: 100%;
-    height: 50%;
+    height: 35%;
     display: flex;
-
 }
 
 .elements-cont::placeholder {  
@@ -101,7 +100,6 @@ body {
 }
 
 
-
 .res {
     position: absolute;
     font-size: 15px;
@@ -109,7 +107,14 @@ body {
 }
 
 h5 {
-    font-size: 20px;
+    font-size:0.8rem ;
     width: 100%;
     height: 100%;
+    
 } 
+
+.signo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
