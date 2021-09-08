@@ -12,7 +12,7 @@ body {
 
 .contenedor-general {
     width: 100%;
-    height: 800px;
+    height: 1200px;
     justify-items: center;
     position: relative;
 }
@@ -26,6 +26,14 @@ body {
     margin-right: 25%;
     display: flex;
     position: relative;
+}
+
+/* DISPLAY DE NUMEROS */
+
+.contenedor-display {
+    width: 100%;
+    height: 35%;
+    display: flex;
 }
 
 .input-num {
@@ -44,26 +52,7 @@ body {
     position: absolute;
 }
 
-.cont-op {
-    box-sizing: border-box;
-    border: 1px solid black;
-    width: 100%;
-    height: 65%;
-    display: grid;
-    align-self: flex-end;
-    position: absolute;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    background-color: #f6e58d;
-}
-
-.button {
-    width: 50%;
-    height: 50%;
-    justify-self: center;
-    align-self: center;
-    font-size: 16px;
-}
+/* RESULTADO */
 
 .cont-res {
     box-sizing: border-box;
@@ -76,16 +65,99 @@ body {
     justify-content: flex-end;
 }
 
-.contenedor-numeros {
+.res {
+    position: absolute;
+    font-size: 15px;
+    align-self: flex-end;
+}
+
+h5 {
+    font-size:0.8rem ;
     width: 100%;
-    height: 35%;
+    height: 100%;
+}
+
+/* CONTENEDOR DE BOTONES */
+
+.cont-botons {
+    position: absolute;
     display: flex;
+    width: 100%;
+    height: 65%;
+    align-self: flex-end;
+}
+
+/* OPERADORES */
+
+.cont-op {
+    box-sizing: border-box;
+    border: 1px solid black;
+    width: 100%;
+    height: 40%;
+    display: grid;
+    align-self: flex-start;
+    position: absolute;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "sum rest igual"
+                         "mult div igual";
+    background-color: #f6e58d;
+}
+
+/* NÚMEROS */
+
+.cont-botons .cont-num {
+    box-sizing: border-box;
+    border: 1px solid black;
+    width: 100%;
+    height: 60%;
+    display: grid;
+    align-self: flex-end;
+    position: absolute;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    background-color: #f6e58d;
+}
+
+.cont-op #sum {
+    grid-area: sum;
+}
+
+.cont-op #rest {
+    grid-area: rest;
+}
+
+.cont-op #igual {
+    grid-area: igual;
+}
+
+.cont-op #mult {
+    grid-area: mult;
+}
+.cont-op #div {
+    grid-area: div;
+}
+
+.cont-num #cero {
+    grid-column-start: 2;
+}
+
+/* ESTILO DE BOTONES */
+
+.button {
+    width: 50%;
+    height: 70%;
+    justify-self: center;
+    align-self: center;
+    font-size: 16px;
 }
 
 .elements-cont::placeholder {  
     font-size: 10px;
     text-align: left;
 } 
+
+/* TITOL */
 
 .titol-calc {
     font-family: Verdana, Geneva, Tahoma, sans-serif;    
@@ -99,22 +171,10 @@ body {
     margin-top: 7%;
 }
 
-
-.res {
-    position: absolute;
-    font-size: 15px;
-    align-self: flex-end;
-}
-
-h5 {
-    font-size:0.8rem ;
-    width: 100%;
-    height: 100%;
-    
-} 
-
-.signo {
+.text-btn {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+

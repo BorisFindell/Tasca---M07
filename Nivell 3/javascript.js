@@ -20,3 +20,13 @@ function calculadora(op, x, y){
 }
     
 var resultat = calculadora('resta', 9, 8)
+
+
+(function () {
+  var numbers = document.getElementByClass("numbers");
+  var operators = document.getElementByClass("operators");
+  var igual = document.getElementByClass("igual");
+
+  numbers.addEventListener("click", asignarValor, false);
+  operators.addEventListener("click", asignarOperador, false);
+  igual.addEventListener("click", calcular, false);
