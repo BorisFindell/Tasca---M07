@@ -41,16 +41,16 @@ document.getElementById("zero").addEventListener("click", function(){
   addNum(0);
 })
 document.getElementById("sum").addEventListener("click", function(){
-  addOp('suma');
+  addOp('+');
 })
 document.getElementById("rest").addEventListener("click", function(){
-  addOp('resta');
+  addOp('-');
 })
 document.getElementById("mult").addEventListener("click", function(){
-  addOp('multiplicacion');
+  addOp('x');
 })
 document.getElementById("div").addEventListener("click", function(){
-  addOp('division');
+  addOp('/');
 })
 document.getElementById("clear").addEventListener("click", function(){
   clear();
@@ -67,21 +67,21 @@ function addNum(num) {
   if (val1 == null || operador == null) {
     if (val1 == null) {
       val1 = val1 + num    
-      console.log(val1)
+      document.getElementById("usu-op").innerHTML = val1
     }
     else {
       val1 = parseInt(val1 + "" + num)
-      console.log(val1)
+      document.getElementById("usu-op").innerHTML = val1
     }
   };
   if (val1 != null && operador != null) {
     if (val2 == null) {
       val2 = val2 + num 
-      console.log(val2)
+      document.getElementById("usu-op").innerHTML = val2
     }  
     else {
       val2 = parseInt(val2 + "" + num)
-      console.log(val2)
+      document.getElementById("usu-op").innerHTML = val2
     }
   }
 };
@@ -91,32 +91,33 @@ function addNum(num) {
 function addOp(op) {
   if (val1 != null) {
     operador = op
-    console.log(operador)
+    document.getElementById("usu-op").innerHTML = op
   }
 }
 //FUNCIÓ DE LA CALCULADORA
 
 function resultat(val1, operador, val2){
     if (!isNaN(val1) && !isNaN(val2)){
-      if (operador == 'suma'){
+      if (operador == '+'){
         result = (val1 + val2)
-          console.log(result)
+          document.getElementById("res").innerHTML = result
       }
-      else if (operador == 'resta') {
+      else if (operador == '-') {
         result = (val1 - val2)
-          console.log(val1 - val2)
+        document.getElementById("res").innerHTML = result
       }
-      else if (operador == 'multiplicacion' || operador == 'multiplicacion') {
+      else if (operador == 'x') {
         result = (val1 * val2)    
-        console.log(val1 * val2)
+        document.getElementById("res").innerHTML = result
       }
-          else {(operador == 'división' || operador == 'division')
+          else {(operador == '/')
             if (val1 == 0 && val2 == 0) {
               console.log('¡No es posible realizar esta operación!')
+              document.getElementById("res").innerHTML = '¡No es posible realizar esta operación!'
             }  
             else {
             result = (val1 / val2) 
-            console.log(val1 / val2)
+            document.getElementById("res").innerHTML = result
             }
           }
     }
@@ -130,4 +131,6 @@ function clear() {
   val1 = null;
   val2 = null;
   operador = null;
+  document.getElementById("usu-op").innerHTML = ""
+  document.getElementById("res").innerHTML = ""
 }
