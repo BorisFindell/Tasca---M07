@@ -57,6 +57,8 @@ document.getElementById("clear").addEventListener("click", function(){
 })
 document.getElementById("igual").addEventListener("click", function(){
   resultat(val1, operador, val2);
+  val2 = null;
+  val1 = result;
 })
 
 //FUNCIÓ ADDNUMBER
@@ -68,7 +70,7 @@ function addNum(num) {
       console.log(val1)
     }
     else {
-      val1 = val1 + "" + num
+      val1 = parseInt(val1 + "" + num)
       console.log(val1)
     }
   };
@@ -78,21 +80,11 @@ function addNum(num) {
       console.log(val2)
     }  
     else {
-      val2 = val2 + "" + num
+      val2 = parseInt(val2 + "" + num)
       console.log(val2)
     }
   }
 };
-
-
-//FUNCIÓN CLEAR
-
-function clear() {
-  val1 = null;
-  val2 = null;
-  operador = null;
-}
-
 
 //FUNCIÓN ADD OP
 
@@ -100,7 +92,6 @@ function addOp(op) {
   if (val1 != null) {
     operador = op
     console.log(operador)
-
   }
 }
 //FUNCIÓ DE LA CALCULADORA
@@ -111,17 +102,32 @@ function resultat(val1, operador, val2){
         result = (val1 + val2)
           console.log(result)
       }
-      else if (operador == 'resta')
+      else if (operador == 'resta') {
+        result = (val1 - val2)
           console.log(val1 - val2)
-      else if (operador == 'multiplicacion' || operador == 'multiplicacion')
-          console.log(val1 * val2)
-      else {(operador == 'división' || operador == 'division')
-            if (val1 == 0 && val2 == 0)
-               console.log('¡No es posible realizar esta operación!')
-            else console.log(val1 / val2)
-           }
+      }
+      else if (operador == 'multiplicacion' || operador == 'multiplicacion') {
+        result = (val1 * val2)    
+        console.log(val1 * val2)
+      }
+          else {(operador == 'división' || operador == 'division')
+            if (val1 == 0 && val2 == 0) {
+              console.log('¡No es posible realizar esta operación!')
+            }  
+            else {
+            result = (val1 / val2) 
+            console.log(val1 / val2)
+            }
+          }
     }
-  else {
-    console.log('Uno o más elementos no son válidos')
-  }
+    else 
+      console.log('Uno o más elementos no son válidos')
+}
+
+//FUNCIÓN CLEAR
+
+function clear() {
+  val1 = null;
+  val2 = null;
+  operador = null;
 }
