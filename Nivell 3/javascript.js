@@ -6,6 +6,7 @@ var val1 = null;
 var val2 = null;
 var operador = null;
 var result = null;
+var reset = false;
 
 
 //LISTENERS
@@ -65,6 +66,9 @@ document.getElementById("igual").addEventListener("click", function(){
 //FUNCIÓ ADDNUMBER
 
 function addNum(num) {
+  if (reset == true) {
+    clear()
+  }
   if (val1 == null || operador == null) {
     if (val1 == null) {
       val1 = val1 + num    
@@ -108,6 +112,7 @@ function addOp(op) {
   if (val1 != null) {
     operador = op
     document.getElementById("usu-op").innerHTML = val1 + '' + operador
+    reset = false;
   }
 }
 
@@ -137,6 +142,7 @@ function resultat(val1, operador, val2){
             document.getElementById("res").innerHTML = result
             }
           }
+    reset = true;
     }
     else 
       console.log('Uno o más elementos no son válidos')
@@ -147,6 +153,7 @@ function resultat(val1, operador, val2){
 function clear() {
   val1 = null;
   val2 = null;
+  reset = false;
   operador = null;
   document.getElementById("usu-op").innerHTML = ""
   document.getElementById("res").innerHTML = ""
