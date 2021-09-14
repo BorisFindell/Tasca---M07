@@ -66,6 +66,9 @@ document.getElementById("igual").addEventListener("click", function(){
 //FUNCIÓ ADDNUMBER
 
 function addNum(num) {
+//Esta variable lo que hace es resetear
+// a 0 las demás llamando a la función clear() cuando se toca un número luego de apretar igual.
+// Comienza seteada en false y sólo se pone en true cuando se toca igual. La función clear() y addOp la ponene en false.
   if (reset == true) {
     clear()
   }
@@ -89,24 +92,10 @@ function addNum(num) {
       document.getElementById("usu-op").innerHTML = val1 + '' + operador + '' + val2
     }
   }
-
-  // if (val1 != null && operador != null && val2 !=null && result != null) {
-    //Si recibe un número
-    // addNum(num)
-    // val2 = null;
-    // operador = null;
-    // result = null;
-    // SI RECIBE UN OPERADOR
-    //ASIGNA OPERADOR
-    //RESULTAT PASA A SER VAL1
-    //VAL2 PASA A SER NULL
-  // }
 };
 
 
-
-
-//FUNCIÓN ADD OP
+//FUNCIÓN QUE AGREGA EL OPERADOR
 
 function addOp(op) {
   if (val1 != null) {
@@ -116,7 +105,7 @@ function addOp(op) {
   }
 }
 
-//FUNCIÓ DE LA CALCULADORA
+//FUNCIÓN DE LA CALCULADORA
 
 function resultat(val1, operador, val2){
     if (!isNaN(val1) && !isNaN(val2)){
