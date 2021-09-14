@@ -61,6 +61,7 @@ document.getElementById("igual").addEventListener("click", function(){
   val1 = result;
 })
 
+
 //FUNCIÓ ADDNUMBER
 
 function addNum(num) {
@@ -77,23 +78,25 @@ function addNum(num) {
   if (val1 != null && operador != null) {
     if (val2 == null) {
       val2 = val2 + num 
-      document.getElementById("usu-op").innerHTML = val2
+      document.getElementById("usu-op").innerHTML = val1 + '' + operador + '' + val2
     }  
     else {
       val2 = parseInt(val2 + "" + num)
-      document.getElementById("usu-op").innerHTML = val2
+      document.getElementById("usu-op").innerHTML = val1 + '' + operador + '' + val2
     }
   }
 };
+
 
 //FUNCIÓN ADD OP
 
 function addOp(op) {
   if (val1 != null) {
     operador = op
-    document.getElementById("usu-op").innerHTML = op
+    document.getElementById("usu-op").innerHTML = val1 + '' + op
   }
 }
+
 //FUNCIÓ DE LA CALCULADORA
 
 function resultat(val1, operador, val2){
