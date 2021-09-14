@@ -63,14 +63,6 @@ body {
     background-color: cornsilk;
 }
 
-.usuari-res .usuario-res-text {
-    display: flex;
-    align-self: flex-end;
-    width: 100%;
-    height: 100%;
-}
-
-
 .res {
     position: absolute;
     font-size: 15px;
@@ -158,7 +150,6 @@ h5 {
     justify-self: center;
     align-self: center;
     font-size: 16px;
-    font-weight: bold;
 }
 
 .elements-cont::placeholder {  
