@@ -85,7 +85,21 @@ function addNum(num) {
       document.getElementById("usu-op").innerHTML = val1 + '' + operador + '' + val2
     }
   }
+
+  // if (val1 != null && operador != null && val2 !=null && result != null) {
+    //Si recibe un número
+    // addNum(num)
+    // val2 = null;
+    // operador = null;
+    // result = null;
+    // SI RECIBE UN OPERADOR
+    //ASIGNA OPERADOR
+    //RESULTAT PASA A SER VAL1
+    //VAL2 PASA A SER NULL
+  // }
 };
+
+
 
 
 //FUNCIÓN ADD OP
@@ -93,7 +107,7 @@ function addNum(num) {
 function addOp(op) {
   if (val1 != null) {
     operador = op
-    document.getElementById("usu-op").innerHTML = val1 + '' + op
+    document.getElementById("usu-op").innerHTML = val1 + '' + operador
   }
 }
 
