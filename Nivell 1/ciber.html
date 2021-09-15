@@ -41,20 +41,14 @@
         }
         
         // Exercici 6
-        let color = 'vert'
-        console.log('Tinc un cotxe de color ' + color)
-        color = 'blau'
-        console.log('Tinc un cotxe de color ' + color)
-        let o = 'o'
-        console.log('T'+'i'+'n'+'c'+' '+'u'+'n'+' '+'c'+ o + 't'+'x'+'e'+' '+'d'+'e'+' '+'c'+ o +'l'+ o +'r'+' '+ color)
-        o = 'u'
-        console.log('T'+'i'+'n'+'c'+' '+'u'+'n'+' '+'c'+ o + 't'+'x'+'e'+' '+'d'+'e'+' '+'c'+ o +'l'+ o +'r'+' '+ color)
         
-        // Exercici 7
-        let llista = ['taula', 'cadira', 'ordinador', 'libreta']
-        for (i = 0; i < llista.length; i++) {
-            console.log("L'objecte " + llista[i] + ' està a la posició ' + i)
-        }
+        
+        let frase = 'Tinc un cotxe de color vert'
+
+        frase = frase.replace(/vert/, 'blau');
+        console.log(frase)
+
+        frase = frase.replace(/o/g, 'u');
+        console.log(frase)
         
     </script>
-        
