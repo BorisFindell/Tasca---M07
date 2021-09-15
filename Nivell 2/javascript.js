@@ -19,4 +19,4 @@ function calculadora(op, x, y){
   }
 }
     
-var resultat = calculadora('resta', 9, 8)
+var resultat = calculadora('división', 10, 2)
